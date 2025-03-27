@@ -37,7 +37,7 @@
 - Handle type inference for redirected commands (#21131) (Thanks @MartinGC94!)
 - Allow empty prefix string in 'Import-Module -Prefix' to override default prefix in manifest (#20409) (Thanks @MartinGC94!)
 - Update variable/property assignment completion so it can fallback to type inference (#21134) (Thanks @MartinGC94!)
-- Use Get-Help approach to find 'about_*.help.txt' files with correct locale for completions (#24194) (Thanks @MartinGC94!)
+- Use `Get-Help` approach to find `about_*.help.txt` files with correct locale for completions (#24194) (Thanks @MartinGC94!)
 - Use script filepath when completing relative paths for using statements (#20017) (Thanks @MartinGC94!)
 - Fix completion of variables assigned inside Do loops (#25076) (Thanks @MartinGC94!)
 - Fix completion of provider paths when a path returns itself instead of its children (#24755) (Thanks @MartinGC94!)
