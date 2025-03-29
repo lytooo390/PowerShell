@@ -1,22 +1,20 @@
 {
     "version": "0.2.0",
     "configurations": [
+      
+
         {
             "name": ".NET Core Launch",
-            "type": "coreclr",
+            "type": "node",
             "request": "launch",
-            "justMyCode": false,
-            "stopAtEntry": true,
             "program": "${workspaceRoot}/debug/pwsh",
             "preLaunchTask": "Build",
-            "externalConsole": true,
             "cwd": "${workspaceRoot}"
         },
         {
             "name": ".NET Core Attach",
-            "type": "coreclr",
+            "type": "node",
             "request": "attach",
-            "justMyCode": false,
             "processId": "${command:pickProcess}"
         },
         {
