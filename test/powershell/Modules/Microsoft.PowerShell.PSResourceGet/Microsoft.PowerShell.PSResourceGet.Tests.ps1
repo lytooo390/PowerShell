@@ -18,8 +18,6 @@ $PublishedNupkgs = Microsoft.PowerShell.Management\Join-Path -Path $TempDir -Chi
 $TestModuleNupkgName = "$TestModule.0.0.1.nupkg"
 $TestModuleNupkgPath = Microsoft.PowerShell.Management\Join-Path -Path $PublishedNupkgs -ChildPath $TestModuleNupkgName
 $TestScriptPath = "$TestScript.ps1"
-$TestScriptNupkgName = "$TestScript.0.0.1.nupkg"
-$TestScriptNupkgPath = Microsoft.PowerShell.Management\Join-Path -Path $PublishedNupkgs -ChildPath $TestScriptNupkgName
 
 $Initialized = $false
 
@@ -72,7 +70,7 @@ if (!(Test-Path $script:ProgramFilesScriptsInfoPath)) {
     New-Item -Path $script:ProgramFilesScriptsInfoPath -ItemType Directory
 }
 
-if (!(Test-Path $script:MyDocumentsScriptsPath)) {
+if (!(Test-Path $script:MyDocumentsScriptsInfoPath)) {
     New-Item -Path $script:MyDocumentsScriptsInfoPath -ItemType Directory
 }
 
@@ -198,7 +196,7 @@ Describe "PSResourceGet - Module tests" -tags "Feature" {
 
     It "Should compress a module into a .nupkg" {
         Compress-PSResource -Path $TestModule -DestinationPath (Resolve-Path -Path $PublishedNupkgs)
-        
+
         $modulePublished = Get-ChildItem $TestModuleNupkgPath
         $modulePublished | Should -Not -BeNullOrEmpty
         $modulePublished.Name | Should -Be $TestModuleNupkgName
