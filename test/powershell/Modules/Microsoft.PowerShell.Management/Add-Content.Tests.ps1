@@ -49,23 +49,31 @@ Describe "Add-Content cmdlet tests" -Tags "CI" {
 
     Context "Add-Content should work with alternate data streams on Windows" {
       BeforeAll {
-        if (!$isWindows) {
+        $isWindowsEnv = $PSVersionTable.PSEdition -eq "Desktop"
+        if (!$isWindowsEnv) {
           return
         }
         $ADSTestDir = "addcontentadstest"
         $ADSTestFile = "addcontentads.txt"
-        $streamContent = "This is a test stream."
+        # Removed unused variable assignment
         Setup -Directory "$ADSTestDir"
         Setup -File "$ADSTestFile"
       }
-
+      }
       It "Should add an alternate data stream on a directory" -Skip:(!$IsWindows) {
-        Add-Content -Path TestDrive:\$ADSTestDir -Stream Add-Content-Test-Stream -Value $streamContent -ErrorAction Stop        
-        Get-Content -Path TestDrive:\$ADSTestDir -Stream Add-Content-Test-Stream | Should -BeExactly $streamContent
+          $streamContent = "AlternateStreamContent"
+          Add-Content -Path TestDrive:\$ADSTestDir -Stream Add-Content-Test-Stream -Value $streamContent -ErrorAction Stop
+          Get-Content -Path TestDrive:\$ADSTestDir -Stream Add-Content-Test-Stream | Should -BeExactly $streamContent
       }
 
       It "Should add an alternate data stream on a file" -Skip:(!$IsWindows) {
-        Add-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream -Value $streamContent -ErrorAction Stop        
+          $streamContent = "AlternateStreamContent"
+          Add-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream -Value $streamContent -ErrorAction Stop
+          Get-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream | Should -BeExactly $streamContent
+      }
+        It "Should add an alternate data stream on a file" -Skip:(!$IsWindows) {
+          $streamContent = "TestStreamContent"
+        Add-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream -Value $streamContent -ErrorAction Stop
         Get-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream | Should -BeExactly $streamContent
       }
     }
@@ -85,6 +93,7 @@ Describe "Add-Content cmdlet tests" -Tags "CI" {
     }
 
     It "Should not block reads while writing" {
+      $testdrive = $TestDrive
       $logpath = Join-Path $testdrive "test.log"
 
       Set-Content $logpath -Value "hello"
