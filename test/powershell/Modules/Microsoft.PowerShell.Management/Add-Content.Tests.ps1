@@ -55,11 +55,10 @@ Describe "Add-Content cmdlet tests" -Tags "CI" {
         }
         $ADSTestDir = "addcontentadstest"
         $ADSTestFile = "addcontentads.txt"
-        # Removed unused variable assignment
         Setup -Directory "$ADSTestDir"
         Setup -File "$ADSTestFile"
       }
-      }
+
       It "Should add an alternate data stream on a directory" -Skip:(!$IsWindows) {
           $streamContent = "AlternateStreamContent"
           Add-Content -Path TestDrive:\$ADSTestDir -Stream Add-Content-Test-Stream -Value $streamContent -ErrorAction Stop
@@ -71,10 +70,14 @@ Describe "Add-Content cmdlet tests" -Tags "CI" {
           Add-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream -Value $streamContent -ErrorAction Stop
           Get-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream | Should -BeExactly $streamContent
       }
-        It "Should add an alternate data stream on a file" -Skip:(!$IsWindows) {
-          $streamContent = "TestStreamContent"
-        Add-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream -Value $streamContent -ErrorAction Stop
-        Get-Content -Path TestDrive:\$ADSTestFile -Stream Add-Content-Test-Stream | Should -BeExactly $streamContent
+
+      AfterAll {
+        if (Test-Path TestDrive:\$ADSTestFile) {
+          Remove-Item -Path TestDrive:\$ADSTestFile -Force
+        }
+        if (Test-Path TestDrive:\$ADSTestDir) {
+          Remove-Item -Path TestDrive:\$ADSTestDir -Recurse -Force
+        }
       }
     }
 
