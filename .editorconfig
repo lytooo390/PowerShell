@@ -1,7 +1,19 @@
 # EditorConfig is awesome: https://EditorConfig.org
+charset = utf-8
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = trueend_of_line = lf
+# EditorConfig is awesome: https://EditorConfig.org
 # .NET coding convention settings for EditorConfig
 # https://learn.microsoft.com/visualstudio/ide/editorconfig-code-style-settings-reference
-#
+#end_of_line = lf
 # This file comes from dotnet repositories:
 # https://github.com/dotnet/runtime/blob/master/.editorconfig
 # https://github.com/dotnet/roslyn/blob/master/.editorconfig
@@ -14,7 +26,8 @@ charset = utf-8
 # indent_size intentionally not specified in this section
 indent_style = space
 insert_final_newline = true
-
+trim_trailing_whitespace = false
+end_of_line = lf
 # Source code
 [*.{cs,ps1,psd1,psm1}]
 indent_size = 4
