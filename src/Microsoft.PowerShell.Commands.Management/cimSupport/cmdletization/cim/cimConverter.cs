@@ -20,7 +20,7 @@ using Microsoft.Management.Infrastructure;
 
 using Dbg = System.Management.Automation.Diagnostics;
 
-// TODO/FIXME: Move this class to src/cimSupport/other directory (to map to the namespace it lives in and functionality it implements [cmdletization independent])
+// TODO/FIXME: #25254 Move this class to src/cimSupport/other directory (to map to the namespace it lives in and functionality it implements [cmdletization independent])
 
 namespace Microsoft.PowerShell.Cim
 {
