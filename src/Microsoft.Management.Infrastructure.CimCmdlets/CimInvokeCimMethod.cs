@@ -394,7 +394,7 @@ namespace Microsoft.Management.Infrastructure.CimCmdlets
                         parameterValue,
                         paramDeclaration.CimType,
                         parameterFlags);
-                    // FIXME: check in/out qualifier
+                    // FIXME: #25253 check in/out qualifier
                     // parameterFlags = paramDeclaration.Qualifiers;
                 }
                 else
