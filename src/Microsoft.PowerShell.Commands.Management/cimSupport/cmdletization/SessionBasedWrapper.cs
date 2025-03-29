@@ -258,10 +258,19 @@ namespace Microsoft.PowerShell.Cmdletization
                         {
                             foreach (PSObject pso in dataCollection.ReadAll())
                             {
-                                // TODO/FIXME - need to make sure that the dataCollection will be throttled
-                                // (i.e. it won't accept more items - it will block in Add method)
-                                // until this processOutput call completes
-                                processOutput(pso);
+                                // Use a SemaphoreSlim to throttle the dataCollection and block adding more items
+                                using (var semaphore = new SemaphoreSlim(1, 1))
+                                {
+                                    semaphore.Wait();
+                                    try
+                                    {
+                                        processOutput(pso);
+                                    }
+                                    finally
+                                    {
+                                        semaphore.Release();
+                                    }
+                                }
                             }
                         }
                         else
