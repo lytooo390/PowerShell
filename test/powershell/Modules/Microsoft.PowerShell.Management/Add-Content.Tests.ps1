@@ -5,8 +5,7 @@ Describe "Add-Content cmdlet tests" -Tags "CI" {
   BeforeAll {
     $file1 = "file1.txt"
     Setup -File "$file1"
-    $streamContent = "ShouldWork"
-  }
+    # Removed unused variable assignment
 
   Context "Add-Content should actually add content" {
     It "should Add-Content to TestDrive:\$file1" {
