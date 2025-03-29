@@ -12,8 +12,8 @@ Please read the rest of this document to ensure a smooth contribution process.
 
 * Make sure you have a [GitHub account](https://github.com/signup/free).
 * Learning Git:
-  * GitHub Help: [Good Resources for Learning Git and GitHub][good-git-resources]
-  * [Git Basics](../docs/git/basics.md): install and getting started
+* GitHub Help: [Good Resources for Learning Git and GitHub][good-git-resources]
+* [Git Basics](../docs/git/basics.md): install and getting started
 * [GitHub Flow Guide](https://guides.github.com/introduction/flow/):
   step-by-step instructions of GitHub Flow
 
@@ -176,14 +176,14 @@ Additional references:
   See [this][closing-via-message] for more details.
 
 * Please use the present tense and imperative mood when describing your changes:
-  * Instead of "Adding support for Windows Server 2012 R2", write "Add support for Windows Server 2012 R2".
-  * Instead of "Fixed for server connection issue", write "Fix server connection issue".
+* Instead of "Adding support for Windows Server 2012 R2", write "Add support for Windows Server 2012 R2".
+* Instead of "Fixed for server connection issue", write "Fix server connection issue".
 
   This form is akin to giving commands to the codebase
   and is recommended by the Git SCM developers.
   It is also used in the [Git commit messages](#common-engineering-practices).
 * If the change is related to a specific resource, please prefix the description with the resource name:
-  * Instead of "New parameter 'ConnectionCredential' in New-SqlConnection",
+* Instead of "New parameter 'ConnectionCredential' in New-SqlConnection",
   write "New-SqlConnection: add parameter 'ConnectionCredential'".
 * If your change warrants an update to user-facing documentation,
   a Maintainer will add the `Documentation Needed` label to your PR and add an issue to the [PowerShell-Docs repository][PowerShell-Docs],
@@ -194,7 +194,7 @@ Additional references:
   (See [Contributing to documentation related to PowerShell](#contributing-to-documentation-related-to-powershell) for more info.)
 * If your change adds a new source file, ensure the appropriate copyright and license headers is on top.
   It is standard practice to have both a copyright and license notice for each source file.
-  * For `.h`, `.cpp`, and `.cs` files use the copyright header with empty line after it:
+* For `.h`, `.cpp`, and `.cs` files use the copyright header with empty line after it:
 
     ```c#
         // Copyright (c) Microsoft Corporation.
@@ -202,9 +202,9 @@ Additional references:
         <Add empty line here>
     ```
 
-  * For `.ps1` and `.psm1` files use the copyright header with empty line after it:
+header with empty line after it:
 
-    ```powershell
+  ```powershell
         # Copyright (c) Microsoft Corporation.
         # Licensed under the MIT License.
         <Add empty line here>
@@ -387,6 +387,10 @@ Reports of abuse will be reviewed by the [PowerShell Committee][ps-committee] an
 The duration of the temporary ban will depend on the impact and/or severity of the infraction.
 This can vary from 1 day, a few days, a week, and up to 30 days.
 Repeat offenses may result in a permanent ban from the PowerShell org.
+
+* Item 1
+    * Sub-item 1
+        * Sub-sub-item 1
 
 [running-tests-outside-of-ci]: ../docs/testing-guidelines/testing-guidelines.md#running-tests-outside-of-ci
 [issue-management]: ../docs/maintainers/issue-management.md
