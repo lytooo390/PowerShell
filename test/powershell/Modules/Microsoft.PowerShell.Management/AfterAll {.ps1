@@ -1,3 +1,6 @@
+$ADSTestFile = "exampleFile.txt"
+$ADSTestDir = "exampleDir"
+
 AfterAll {
     if (Test-Path TestDrive:\$ADSTestFile) {
         Remove-Item -Path TestDrive:\$ADSTestFile -Force
