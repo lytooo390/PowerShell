@@ -37,5 +37,8 @@
 
   // Omnisharp : Enable EditorConfig support
   "omnisharp.enableEditorConfigSupport": true,
-  "dotnet.defaultSolution": "test/perf/dotnet-tools/ResultsComparer/ResultsComparer.sln"
+  "dotnet.defaultSolution": "test/perf/dotnet-tools/ResultsComparer/ResultsComparer.sln",
+  "cSpell.words": [
+    "trimstart"
+  ]
 }

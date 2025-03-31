@@ -69,7 +69,7 @@ made.
 
 ### Contributing to documentation related to maintaining or contributing to the PowerShell project
 
-* When writing Markdown documentation, use [semantic linefeeds][].
+* When writing Markdown documentation, use [semantic linefeed][].
   In most cases, it means "one clause/idea per line".
 * Otherwise, these issues should be treated like any other issue in this repository.
 
@@ -354,10 +354,10 @@ is also appropriate, as is using Markdown syntax.
 
 * These are based on Tim Pope's [guidelines][def],
   Git SCM [submitting patches](https://git.kernel.org/cgit/git/git.git/tree/Documentation/SubmittingPatches),
-  Brandon Rhodes' [semantic linefeeds][],
+  Brandon Rhodes' [semantic linefeed][],
   and John *These are based on Tim Pope's [guidelines][def],*
     Git SCM [submitting patches](https://git.kernel.org/cgit/git/git.git/tree/Documentation/SubmittingPatches),
-    Brandon Rhodes' [semantic linefeeds][],    * These are based on Tim Pope's [guidelines][def],
+    Brandon Rhodes' [semantic linefeed][],    * These are based on Tim Pope's [guidelines][def],
       Git SCM [submitting patches](https://git.kernel.org/cgit/git/git.git/tree/Documentation/SubmittingPatches),
       Brandon Rhodes' [semantic linefeeds](https://rhodesmill.org/brandon/2012/one-sentence-per-line/),
       and John Gruber's [Markdown syntax](https://daringfireball.net/projects/markdown/syntax).
@@ -400,7 +400,7 @@ When your pull request is created, it is checked by the CLA bot.
 [contribute-issues]: #contributing-to-issues
 [open-issue]: https://github.com/PowerShell/PowerShell/issues
 [up-for-grabs]: https://github.com/powershell/powershell/issues?q=is%3Aopen+is%3Aissue+label%3AUp-for-Grabs
-[semantic linefeeds]: https://rhodesmill.org/brandon/2012/one-sentence-per-line/
+[semantic linefeed]: https://rhodesmill.org/brandon/2012/one-sentence-per-line/
 [PowerShell-Docs]: https://github.com/powershell/powershell-docs/
 [use-vscode-editor]: https://learn.microsoft.com/dotnet/core/tutorials/with-visual-studio-code
 [repository-maintainer]: ../docs/community/governance.md#repository-maintainers
