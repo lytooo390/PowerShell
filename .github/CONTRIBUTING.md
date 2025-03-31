@@ -352,10 +352,16 @@ Using semantic line feeds (breaks that separate ideas)
 is also appropriate, as is using Markdown syntax.
 ```
 
-* These are based on Tim Pope's [guidelines](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html),
+* These are based on Tim Pope's [guidelines][def],
   Git SCM [submitting patches](https://git.kernel.org/cgit/git/git.git/tree/Documentation/SubmittingPatches),
   Brandon Rhodes' [semantic linefeeds][],
-  and John Gruber's [Markdown syntax](https://daringfireball.net/projects/markdown/syntax).
+  and John *These are based on Tim Pope's [guidelines][def],*
+    Git SCM [submitting patches](https://git.kernel.org/cgit/git/git.git/tree/Documentation/SubmittingPatches),
+    Brandon Rhodes' [semantic linefeeds][],    * These are based on Tim Pope's [guidelines][def],
+      Git SCM [submitting patches](https://git.kernel.org/cgit/git/git.git/tree/Documentation/SubmittingPatches),
+      Brandon Rhodes' [semantic linefeeds](https://rhodesmill.org/brandon/2012/one-sentence-per-line/),
+      and John Gruber's [Markdown syntax](https://daringfireball.net/projects/markdown/syntax).
+    and John Gruber's [Markdown syntax](https://daringfireball.net/projects/markdown/syntax). [Markdown syntax](https://daringfireball.net/projects/markdown/syntax).
 * Don't commit code that you didn't write.
   If you find code that you think is a good fit to add to PowerShell,
   file an issue and start a discussion before proceeding.
@@ -377,16 +383,6 @@ Signing the CLA process is simple and can be done in less than a minute.
 You don't have to do this up-front.
 You can simply clone, fork, and submit your pull request as usual.
 When your pull request is created, it is checked by the CLA bot.
-If you have signed the CLA, the status check will be set to `passing`.  Otherwise, it will stay at `pending`.
-Once you sign a CLA, all your existing and future pull requests will have the status check automatically set at `passing`.
-
-## Code of Conduct Enforcement
-
-Reports of abuse will be reviewed by the [PowerShell Committee][ps-committee] and if it has been determined that violations of the
-[Code of Conduct](../CODE_OF_CONDUCT.md) has occurred, then a temporary ban may be imposed.
-The duration of the temporary ban will depend on the impact and/or severity of the infraction.
-This can vary from 1 day, a few days, a week, and up to 30 days.
-Repeat offenses may result in a permanent ban from the PowerShell org.
 
 * Item 1
     * Sub-item 1
@@ -400,7 +396,7 @@ Repeat offenses may result in a permanent ban from the PowerShell org.
 [closing-via-message]: https://help.github.com/articles/closing-issues-via-commit-messages/
 [CLA]: #contributor-license-agreement-cla
 [ci-system]: ../docs/testing-guidelines/testing-guidelines.md#ci-system
-[good-git-resources]: https://help.github.com/articles/good-resources-for-learning-git-and-github/
+[good-git-resources]: https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources
 [contribute-issues]: #contributing-to-issues
 [open-issue]: https://github.com/PowerShell/PowerShell/issues
 [up-for-grabs]: https://github.com/powershell/powershell/issues?q=is%3Aopen+is%3Aissue+label%3AUp-for-Grabs
@@ -413,4 +409,4 @@ Repeat offenses may result in a permanent ban from the PowerShell org.
 [coding-guidelines]: ../docs/dev-process/coding-guidelines.md
 [breaking-changes-contract]: ../docs/dev-process/breaking-change-contract.md
 [rfc-process]: https://github.com/PowerShell/PowerShell-RFC
-[ps-committee]: ../docs/community/governance.md#powershell-committee
+[def]: https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
