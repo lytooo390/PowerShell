@@ -17,7 +17,8 @@ function Repair-MarkdownIndentation {
             $currentIndentation = ($_ -replace '[\*\-\+].*$', '').Length
 
             # Adjust indentation to match the expected level
-            $adjustedLine = (' ' * $ExpectedIndentation * ($currentIndentation / 2)) + ($_ -trimstart)
+            $adjustedIndentation = [math]::Floor($currentIndentation / 2) * $ExpectedIndentation
+            $adjustedLine = (' ' * $adjustedIndentation) + ($_.TrimStart())
             return $adjustedLine
         } else {
             return $_
